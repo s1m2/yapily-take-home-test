@@ -17,8 +17,3 @@ jobs:
       - name: Run unit tests
         run: npm run test:unit
 
-      - name: Upload test results
-        uses: actions/upload-artifact@v3
-        with:
-          name: test-results
-
