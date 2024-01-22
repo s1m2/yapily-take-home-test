@@ -1,7 +1,9 @@
 # yapily-take-home-test
 
 Name: Sam Macharia
+
 Project: Yapily Coding Challenge - Marvel API -v1
+
 Live url: (https://comforting-sopapillas-e2b1f8.netlify.app/)
 
 This template should help get you started developing with Vue 3 in Vite.
