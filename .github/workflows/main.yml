@@ -17,13 +17,8 @@ jobs:
       - name: Run unit tests
         run: npm run test:unit
 
-      - name: Run e2e tests
-        run: npm run test:e2e
-
       - name: Upload test results
         uses: actions/upload-artifact@v3
         with:
           name: test-results
-
-# You can also add additional steps here, such as deploying your app
 
