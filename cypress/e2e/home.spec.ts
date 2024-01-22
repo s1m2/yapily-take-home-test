@@ -1,7 +1,7 @@
 /* ==== Test Created with Cypress Studio ==== */
 it('loaded page', function() {
   /* ==== Generated with Cypress Studio ==== */
-  cy.visit('http://localhost:4173');
+  cy.visit('http://localhost:5173');
   cy.get('[data-cy="header"]').should('be.visible');
   cy.get('[data-cy="input"]').should('be.visible');
   cy.get('[data-cy="marvel-logo"]').should('be.visible');
