@@ -13,7 +13,6 @@ vi.mock('@/lib/utils', () => {
 })
 
 describe('HomeView', () => {
-
   let wrapper: any
   let store: any
 
@@ -27,7 +26,7 @@ describe('HomeView', () => {
           createTestingPinia({
             createSpy: vi.fn
           })
-        ],
+        ]
       }
     })
 
@@ -50,12 +49,11 @@ describe('HomeView', () => {
   })
 
   it('calls getCharacters when data is not available in local storage', async () => {
-
     localStorage.removeItem('marvelCharacters')
 
     const wrapper = mount(HomeView)
     await wrapper.vm.$nextTick()
- 
+
     expect(invalidateLocalStorageIfExpired).toHaveBeenCalled()
     expect(checkFromLocalStorage).toHaveBeenCalledWith('marvelCharacters')
     expect(store.getCharacters).toHaveBeenCalled()

@@ -23,6 +23,10 @@ const model = computed({
   </p>
   <input type="text" id="name" v-model="model" v-if="isEditMode" class="mb-5 p-4 w-full" />
   <h3 class="text-5xl text-white font-extrabold mb-5">Description</h3>
-  <p v-if="character.description" class="text-white text-xl font-semibold mb-8">{{ character.description }}</p>
-  <p v-else class="text-white text-xl font-semibold mb-8">No description available yet. Keep a look out</p>
+  <p v-if="character.description" class="text-white text-xl font-semibold mb-8">
+    {{ character.description }}
+  </p>
+  <p v-else class="text-white text-xl font-semibold mb-8">
+    No description available yet. Keep a look out
+  </p>
 </template>

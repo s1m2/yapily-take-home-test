@@ -54,7 +54,7 @@ describe('useMarvelStore', () => {
   it('should fetch character details', () => {
     const mockCharacters = [
       { id: 1, name: 'Iron Man', thumbnail: 'ironman.jpg' },
-      { id: 2, name: 'Captain America', thumbnail: 'captainamerica.jpg' },
+      { id: 2, name: 'Captain America', thumbnail: 'captainamerica.jpg' }
     ]
     store.marvelCharacters = mockCharacters
 
@@ -66,7 +66,7 @@ describe('useMarvelStore', () => {
   it.skip('should update character details', () => {
     const mockCharacters = [
       { id: 1, name: 'Iron Man', thumbnail: 'ironman.jpg' },
-      { id: 2, name: 'Captain America', thumbnail: 'captainamerica.jpg' },
+      { id: 2, name: 'Captain America', thumbnail: 'captainamerica.jpg' }
     ]
     store.marvelCharacters = mockCharacters
 
@@ -75,7 +75,9 @@ describe('useMarvelStore', () => {
     store.updateCharacterDetails(1, { name: updatedName, thumbnail: updatedThumbnail })
 
     expect(store.marvelCharacters[0].name).toStrictEqual('Iron Man Updated')
-    expect(localStorage.getItem('marvelCharacters')).toBe(JSON.stringify(store.marvelCharacters.value))
+    expect(localStorage.getItem('marvelCharacters')).toBe(
+      JSON.stringify(store.marvelCharacters.value)
+    )
   })
 
   it('should navigate to the next page', () => {

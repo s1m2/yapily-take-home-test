@@ -50,7 +50,7 @@ function saveInformation() {
 }
 
 onBeforeMount(async () => {
- initializeComponent()
+  initializeComponent()
 })
 
 watch(
@@ -64,7 +64,9 @@ watch(
 <template>
   <div class="mx-4 max-w-screen-xl md:mx-auto mt-20">
     <div class="-rotate-6 -skew-y-6 bg-red-600 p-6 w-fit mb-6">
-      <p data-cy="legend-name" class="text-3xl text-white font-extrabold">LEGEND: {{ legendName }}</p>
+      <p data-cy="legend-name" class="text-3xl text-white font-extrabold">
+        LEGEND: {{ legendName }}
+      </p>
     </div>
 
     <div class="grid md:grid-cols-2 gap-6">
@@ -95,7 +97,9 @@ watch(
     <div class="flex justify-between gap-4 my-28">
       <AppButton @click="editDetails" v-if="!isEditMode"> Edit Details </AppButton>
       <AppButton @click="saveInformation" v-if="isEditMode"> Save Information </AppButton>
-      <AppButton @click="router.push({ name: 'home', params: { page: currentPage } })"> Go Back Home </AppButton>
+      <AppButton @click="router.push({ name: 'home', params: { page: currentPage } })">
+        Go Back Home
+      </AppButton>
     </div>
   </div>
 </template>
