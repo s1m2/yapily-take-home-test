@@ -56,6 +56,7 @@ export const useMarvelStore = defineStore('marvel', () => {
   }
 
   async function getCharacter(id: number) {
+    if (!marvelCharacters.value.length) await getCharacters()
     marvelCharacter.value = marvelCharacters.value.find((character) => character.id === id)
   }
 

@@ -11,7 +11,7 @@ const tabs = ['Comics', 'Series', 'Stories', 'Events']
 </script>
 
 <template>
-  <Tabs :tabs="tabs">
+  <Tabs :tabs="tabs" class="overflow-x-auto">
     <Tab title="Comics">
       <AppList :list="marvelCharacter?.comics?.items ?? []" />
     </Tab>
