@@ -44,7 +44,7 @@ describe('HeroView', () => {
   })
 
   it('displays the legend name', () => {
-    expect(wrapper.find('[data-cy="legend-name"]').text()).toBe()
+    expect(wrapper.find('[data-cy="legend-name"]').text()).toBe(`LEGEND: ${character.name}`)
   })
 
   // it('uploads a file', async () => {
