@@ -6,6 +6,6 @@ const cards = ref(new Array(9))
 
 <template>
   <div class="animate-pulse" v-for="(card, index) in cards" :key="index">
-    <div data-cy="card" class="bg-slate-500 h-72 w-72"></div>
+    <div data-cy="card" class="bg-slate-500 h-72 w-full md:w-72"></div>
   </div>
 </template>

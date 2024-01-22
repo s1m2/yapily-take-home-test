@@ -39,6 +39,7 @@ async function initializeComponent() {
   await getCharacter(Number(route.params.id))
   imageURL.value = checkImagePath(marvelCharacter.value as Character)
   legendName.value = marvelCharacter.value?.name as string
+  window.scrollTo(0, 0)
 }
 
 function saveInformation() {
@@ -64,7 +65,7 @@ watch(
 <template>
   <div class="mx-4 max-w-screen-xl md:mx-auto mt-20">
     <div class="-rotate-6 -skew-y-6 bg-red-600 p-6 w-fit mb-6">
-      <p data-cy="legend-name" class="text-3xl text-white font-extrabold">
+      <p data-cy="legend-name" class="text-2xl md:text-3xl text-white font-extrabold">
         LEGEND: {{ legendName }}
       </p>
     </div>

@@ -17,12 +17,12 @@ const model = computed({
 </script>
 
 <template>
-  <h3 class="text-5xl text-white font-extrabold mb-5">Name</h3>
-  <p class="text-white text-4xl font-semibold mb-5" v-if="!isEditMode">
+  <h3 class="text-3xl md:text-5xl text-white font-extrabold mb-5">Name</h3>
+  <p class="text-white text-2xl md:text-4xl font-semibold mb-5" v-if="!isEditMode">
     {{ model }}
   </p>
   <input type="text" id="name" v-model="model" v-if="isEditMode" class="mb-5 p-4 w-full" />
-  <h3 class="text-5xl text-white font-extrabold mb-5">Description</h3>
+  <h3 class="text-3xl md:text-5xl text-white font-extrabold mb-5">Description</h3>
   <p v-if="character.description" class="text-white text-xl font-semibold mb-8">
     {{ character.description }}
   </p>

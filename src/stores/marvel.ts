@@ -73,6 +73,7 @@ export const useMarvelStore = defineStore('marvel', () => {
     currentPage.value += 1
     router.push({ query: { page: currentPage.value } })
     currentPageResults.value = paginatedResults.value[currentPage.value]
+    window.scrollTo(0, 0)
   }
 
   function previousPage() {
@@ -80,6 +81,7 @@ export const useMarvelStore = defineStore('marvel', () => {
     currentPage.value -= 1
     router.push({ query: { page: currentPage.value } })
     currentPageResults.value = paginatedResults.value[currentPage.value]
+    window.scrollTo(0, 0)
   }
 
   return {
