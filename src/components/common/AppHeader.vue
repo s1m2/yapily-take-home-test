@@ -15,7 +15,7 @@ function goToHeroDetails(id: number) {
 </script>
 
 <template>
-  <header class="bg-red-600 p-5 relative">
+  <header data-cy="header" class="bg-red-600 p-5 relative">
     <AppInput
       v-model="searchTerm"
       class="p-3 w-full md:w-3/5"
