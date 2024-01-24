@@ -19,7 +19,7 @@ function selectTab(tab: string) {
     <div class="flex gap-5 mb-4 overflow-x-auto">
       <button
         class="text-sm md:text-3xl text-white -skew-x-6 p-3 transition-all"
-        :class="{ 'bg-red-600': currentTab === tab, 'hover:text-red-600': currentTab !== tab }"
+        :class="{ 'bg-red-600': currentTab === tab, 'hover:text-red-600 focus-visible:text-red-600': currentTab !== tab }"
         v-for="(tab, index) in tabs"
         :key="index"
         data-cy="tab-button"
