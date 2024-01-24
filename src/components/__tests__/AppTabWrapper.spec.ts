@@ -1,16 +1,20 @@
 import { describe, expect, it, vi, beforeEach } from 'vitest'
-import { mount } from '@vue/test-utils'
+import { mount, RouterLinkStub } from '@vue/test-utils'
 import { createTestingPinia } from '@pinia/testing'
 import { character } from '@/mocks/charcterMock'
+import { useMarvelStore } from '@/stores/marvel'
 import AppTabWrapper from '@/components/common/AppTabWrapper.vue'
-import AppList from '@/components/common/AppList.vue'
 
 describe('AppTabWrapper', () => {
   let wrapper: any
+  let store: any;
 
   beforeEach(() => {
     wrapper = mount(AppTabWrapper, {
       global: {
+        stubs: {
+          RouterLink: RouterLinkStub
+        },
         plugins: [
           createTestingPinia({
             createSpy: vi.fn
@@ -19,9 +23,8 @@ describe('AppTabWrapper', () => {
       }
     })
 
-    wrapper.vm.$nextTick(() => {
-      wrapper.getComponent(AppList).props().list = character.comics.items
-    })
+    store = useMarvelStore()
+    store.marvelCharacter = character
   })
 
   it('renders the correct tabs', () => {

@@ -37,15 +37,17 @@ function editDetails() {
 
 async function initializeComponent() {
   await getCharacter(Number(route.params.id))
+  if (marvelCharacter.value === undefined) return
   imageURL.value = checkImagePath(marvelCharacter.value as Character)
-  legendName.value = marvelCharacter.value?.name as string
+  legendName.value = marvelCharacter.value.name as string
   window.scrollTo(0, 0)
 }
 
 function saveInformation() {
   editDetails()
-  updateCharacterDetails(marvelCharacter.value?.id, {
-    name: legendName?.value,
+  if (marvelCharacter.value === undefined) return
+  updateCharacterDetails(marvelCharacter.value.id, {
+    name: legendName.value,
     thumbnail: imageURL.value
   })
 }

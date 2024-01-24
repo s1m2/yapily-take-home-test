@@ -61,7 +61,7 @@ onBeforeMount(async () => {
       </template>
     </div>
 
-    <div class="flex justify-between gap-4 my-28">
+    <div class="flex justify-between gap-4 my-28" v-if="!loading && currentPageResults.length">
       <AppButton data-cy="previous" @click="previousPage">Previous</AppButton>
       <AppButton data-cy="next" @click="nextPage">Next</AppButton>
     </div>

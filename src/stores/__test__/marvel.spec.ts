@@ -8,6 +8,8 @@ vi.mock('vue-router', () => ({
   })
 }))
 
+window.scrollTo = vi.fn()
+
 vi.mock('@/lib/api', () => ({
   getMarvelCharacters: vi.fn().mockResolvedValue({
     json: vi.fn().mockResolvedValueOnce({
