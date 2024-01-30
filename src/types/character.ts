@@ -29,6 +29,13 @@ type Url = {
   url: string
 }
 
+type Comics = {
+  available: number
+  collectionURI: string
+  items: Comic[]
+  returned: number
+}
+
 export type Character = {
   id: number
   name: string
@@ -36,12 +43,7 @@ export type Character = {
   modified: string
   thumbnail: Thumbnail
   resourceURI: string
-  comics: {
-    available: number
-    collectionURI: string
-    items: Comic[]
-    returned: number
-  }
+  comics: Comics
   series: {
     available: number
     collectionURI: string
